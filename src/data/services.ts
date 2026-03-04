@@ -193,4 +193,11 @@ export const teamMembers = [
     avatar: 'MA',
     image: 'team-manzoor-ali.png',
   },
+  {
+    name: 'noor ul mubeen',
+    role: 'CTO',
+    focus: 'DevOps engineer',
+    avatar: 'NM',
+    image: 'team-noor-ul-mubeen.png',
+  },
 ];
