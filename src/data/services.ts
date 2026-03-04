@@ -166,27 +166,31 @@ export const portfolioItems = [
 
 export const teamMembers = [
   {
-    name: 'Alex Rivera',
-    role: 'Founder & CEO',
+    name: 'Tosif Sheraz',
+    role: 'CEO',
     focus: 'Strategy & Vision',
-    avatar: 'AR',
+    avatar: 'TS',
+    image: 'team-tosif-sheraz.jpeg',
   },
   {
-    name: 'Jordan Kim',
-    role: 'Creative Director',
-    focus: 'Design & Brand',
-    avatar: 'JK',
+    name: 'kamran khan',
+    role: 'Founder',
+    focus: 'Devops Lead',
+    avatar: 'KK',
+    image: 'team-kamran-khan.png',
   },
   {
-    name: 'Taylor Brooks',
+    name: 'hasnain babar',
     role: 'Lead Developer',
     focus: 'Technology & Architecture',
-    avatar: 'TB',
+    avatar: 'HB',
+    image: 'team-hasnain-babar.png',
   },
   {
-    name: 'Morgan Chen',
+    name: 'manzoor ali',
     role: 'Marketing Head',
     focus: 'Growth & Analytics',
-    avatar: 'MC',
+    avatar: 'MA',
+    image: 'team-manzoor-ali.png',
   },
 ];

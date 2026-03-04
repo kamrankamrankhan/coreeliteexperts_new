@@ -258,11 +258,19 @@ export function About() {
                 <div className="relative mb-4">
                   <div className="aspect-square rounded-2xl overflow-hidden bg-white/[0.02] border border-white/5 group-hover:border-brand-accent/30 transition-all duration-500">
                     <div className="w-full h-full flex items-center justify-center">
-                      <div className="w-24 h-24 rounded-full bg-gradient-to-br from-brand-accent to-brand-accent/50 flex items-center justify-center">
-                        <span className="text-3xl font-display font-bold text-brand-dark">
-                          {member.avatar}
-                        </span>
-                      </div>
+                      {'image' in member && member.image ? (
+                        <img
+                          src={`${import.meta.env.BASE_URL}${member.image}`}
+                          alt={member.name}
+                          className={`w-full h-full object-cover ${member.name === 'kamran khan' ? 'object-[center_25%]' : 'object-[center_40%]'}`}
+                        />
+                      ) : (
+                        <div className="w-24 h-24 rounded-full bg-gradient-to-br from-brand-accent to-brand-accent/50 flex items-center justify-center">
+                          <span className="text-3xl font-display font-bold text-brand-dark">
+                            {member.avatar}
+                          </span>
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>
