@@ -30,7 +30,7 @@ export function Portfolio() {
           opacity: 1,
           duration: 0.8,
           stagger: 0.1,
-          ease: 'power2.out',
+          ease: 'power3.out',
           scrollTrigger: {
             trigger: headerRef.current,
             start: 'top 80%',
@@ -52,7 +52,7 @@ export function Portfolio() {
             scale: 1,
             duration: 0.6,
             stagger: 0.1,
-            ease: 'power2.out',
+            ease: 'power3.out',
             scrollTrigger: {
               trigger: gridRef.current,
               start: 'top 75%',

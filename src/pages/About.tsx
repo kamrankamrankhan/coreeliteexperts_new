@@ -262,7 +262,7 @@ export function About() {
                         <img
                           src={`${import.meta.env.BASE_URL}${member.image}`}
                           alt={member.name}
-                          className={`w-full h-full object-cover ${member.name === 'kamran khan' ? 'object-[center_25%]' : 'object-[center_40%]'}`}
+                          className={`w-full h-full object-cover ${member.name === 'kamran khan' ? 'object-[center_25%]' : member.name === 'manzoor ali' ? 'object-[center_25%]' : 'object-[center_40%]'}`}
                         />
                       ) : (
                         <div className="w-24 h-24 rounded-full bg-gradient-to-br from-brand-accent to-brand-accent/50 flex items-center justify-center">

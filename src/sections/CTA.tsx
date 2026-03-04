@@ -23,10 +23,10 @@ export function CTA() {
           opacity: 1,
           duration: 0.8,
           stagger: 0.1,
-          ease: 'power2.out',
+          ease: 'power3.out',
           scrollTrigger: {
             trigger: contentRef.current,
-            start: 'top 80%',
+            start: 'top 85%',
             end: 'top 50%',
             toggleActions: 'play none none reverse',
           },

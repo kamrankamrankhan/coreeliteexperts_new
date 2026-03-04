@@ -30,10 +30,10 @@ export function Process() {
           opacity: 1,
           duration: 0.8,
           stagger: 0.1,
-          ease: 'power2.out',
+          ease: 'power3.out',
           scrollTrigger: {
             trigger: headerRef.current,
-            start: 'top 80%',
+            start: 'top 85%',
             end: 'top 50%',
             toggleActions: 'play none none reverse',
           },
@@ -67,11 +67,11 @@ export function Process() {
             {
               x: 0,
               opacity: 1,
-              duration: 0.8,
-              ease: 'power2.out',
+              duration: 0.9,
+              ease: 'power3.out',
               scrollTrigger: {
                 trigger: step,
-                start: 'top 80%',
+                start: 'top 85%',
                 end: 'top 50%',
                 toggleActions: 'play none none reverse',
               },

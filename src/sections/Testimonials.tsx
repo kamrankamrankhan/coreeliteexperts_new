@@ -22,7 +22,7 @@ export function Testimonials() {
           opacity: 1,
           duration: 0.8,
           stagger: 0.1,
-          ease: 'power2.out',
+          ease: 'power3.out',
           scrollTrigger: {
             trigger: headerRef.current,
             start: 'top 80%',
@@ -44,7 +44,7 @@ export function Testimonials() {
             scale: 1,
             duration: 0.6,
             stagger: 0.15,
-            ease: 'power2.out',
+            ease: 'power3.out',
             scrollTrigger: {
               trigger: cardsRef.current,
               start: 'top 75%',
