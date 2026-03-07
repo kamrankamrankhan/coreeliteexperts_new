@@ -180,7 +180,7 @@ export const teamMembers = [
     image: 'team-kamran-khan.png',
   },
   {
-    name: 'hasnain babar',
+    name: 'Hasnain Babar',
     role: 'Lead Developer',
     focus: 'Technology & Architecture',
     avatar: 'HB',
