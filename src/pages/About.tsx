@@ -138,6 +138,7 @@ export function About() {
 
   return (
     <main className="relative pt-20">
+      
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 bg-brand-dark overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-brand-accent/5 blur-[120px]" />
@@ -152,6 +153,66 @@ export function About() {
             <p className="body-lg">
               Founded in 2012, coreeliteexperts has grown from a small design studio to a full-service digital agency, helping businesses around the world transform their digital presence.
             </p>
+          </div>
+        </div>
+      </section>
+       {/* Team Section */}
+      <section className="relative py-20 lg:py-32 bg-brand-dark">
+        <div className="section-container">
+          <div className="text-center mb-16">
+            <span className="label-mono mb-4 block">Our Team</span>
+            <h2 className="heading-md text-white">
+              Meet the <span className="text-gradient">Experts</span> behind Coreeliteexperts
+            </h2>
+          </div>
+
+          <div ref={teamRef} className="relative px-10 lg:px-14">
+            <Carousel
+              opts={{
+                align: 'start',
+                loop: true,
+                dragFree: false,
+              }}
+              className="w-full"
+            >
+              <CarouselContent className="-ml-4 flex">
+                {teamMembers.map((member, index) => (
+                  <CarouselItem
+                    key={index}
+                    className="pl-4 basis-full sm:basis-1/2 lg:basis-1/4"
+                  >
+                    <div className="team-card group text-center">
+                      <div className="relative mb-4">
+                        <div className="aspect-square rounded-2xl overflow-hidden bg-white/[0.02] border border-white/5 group-hover:border-brand-accent/30 transition-all duration-500">
+                          <div className="w-full h-full flex items-center justify-center">
+                            {'image' in member && member.image ? (
+                              <img
+                                src={`${import.meta.env.BASE_URL}${member.image}`}
+                                alt={member.name}
+                                className={`w-full h-full object-cover ${member.name === 'kamran khan' ? 'object-[center_25%]' : member.name === 'manzoor ali' ? 'object-[center_25%]' : member.name === 'noor ul mubeen' ? 'object-[center_30%]' : 'object-[center_40%]'}`}
+                              />
+                            ) : (
+                              <div className="w-24 h-24 rounded-full bg-gradient-to-br from-brand-accent to-brand-accent/50 flex items-center justify-center">
+                                <span className="text-3xl font-display font-bold text-brand-dark">
+                                  {member.avatar}
+                                </span>
+                              </div>
+                            )}
+                          </div>
+                        </div>
+                      </div>
+                      <h3 className="text-lg font-display font-semibold text-white mb-1">
+                        {member.name}
+                      </h3>
+                      <p className="text-sm text-brand-accent mb-1">{member.role}</p>
+                      <p className="text-xs text-muted-foreground">{member.focus}</p>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="left-0 border-white/20 bg-brand-dark hover:bg-white/10 hover:border-brand-accent/50 text-white disabled:opacity-30" />
+              <CarouselNext className="right-0 border-white/20 bg-brand-dark hover:bg-white/10 hover:border-brand-accent/50 text-white disabled:opacity-30" />
+            </Carousel>
           </div>
         </div>
       </section>
@@ -242,67 +303,6 @@ export function About() {
                 </div>
               );
             })}
-          </div>
-        </div>
-      </section>
-
-      {/* Team Section */}
-      <section className="relative py-20 lg:py-32 bg-brand-dark">
-        <div className="section-container">
-          <div className="text-center mb-16">
-            <span className="label-mono mb-4 block">Our Team</span>
-            <h2 className="heading-md text-white">
-              Meet the <span className="text-gradient">Experts</span> behind Coreeliteexperts
-            </h2>
-          </div>
-
-          <div ref={teamRef} className="relative px-10 lg:px-14">
-            <Carousel
-              opts={{
-                align: 'start',
-                loop: true,
-                dragFree: false,
-              }}
-              className="w-full"
-            >
-              <CarouselContent className="-ml-4 flex">
-                {teamMembers.map((member, index) => (
-                  <CarouselItem
-                    key={index}
-                    className="pl-4 basis-full sm:basis-1/2 lg:basis-1/4"
-                  >
-                    <div className="team-card group text-center">
-                      <div className="relative mb-4">
-                        <div className="aspect-square rounded-2xl overflow-hidden bg-white/[0.02] border border-white/5 group-hover:border-brand-accent/30 transition-all duration-500">
-                          <div className="w-full h-full flex items-center justify-center">
-                            {'image' in member && member.image ? (
-                              <img
-                                src={`${import.meta.env.BASE_URL}${member.image}`}
-                                alt={member.name}
-                                className={`w-full h-full object-cover ${member.name === 'kamran khan' ? 'object-[center_25%]' : member.name === 'manzoor ali' ? 'object-[center_25%]' : member.name === 'noor ul mubeen' ? 'object-[center_30%]' : 'object-[center_40%]'}`}
-                              />
-                            ) : (
-                              <div className="w-24 h-24 rounded-full bg-gradient-to-br from-brand-accent to-brand-accent/50 flex items-center justify-center">
-                                <span className="text-3xl font-display font-bold text-brand-dark">
-                                  {member.avatar}
-                                </span>
-                              </div>
-                            )}
-                          </div>
-                        </div>
-                      </div>
-                      <h3 className="text-lg font-display font-semibold text-white mb-1">
-                        {member.name}
-                      </h3>
-                      <p className="text-sm text-brand-accent mb-1">{member.role}</p>
-                      <p className="text-xs text-muted-foreground">{member.focus}</p>
-                    </div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious className="left-0 border-white/20 bg-brand-dark hover:bg-white/10 hover:border-brand-accent/50 text-white disabled:opacity-30" />
-              <CarouselNext className="right-0 border-white/20 bg-brand-dark hover:bg-white/10 hover:border-brand-accent/50 text-white disabled:opacity-30" />
-            </Carousel>
           </div>
         </div>
       </section>
