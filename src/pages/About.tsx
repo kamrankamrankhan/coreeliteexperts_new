@@ -252,7 +252,7 @@ export function About() {
           <div className="text-center mb-16">
             <span className="label-mono mb-4 block">Our Team</span>
             <h2 className="heading-md text-white">
-              Meet the <span className="text-gradient">people</span> behind coreeliteexperts
+              Meet the <span className="text-gradient">Experts</span> behind Coreeliteexperts
             </h2>
           </div>
 
